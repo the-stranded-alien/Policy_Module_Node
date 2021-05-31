@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Risks</title>
+</head>
+<body>
+    <center> 
+    <div>
+        <h1>Risk Page</h1>
+    </div>
+    <div>
+    <form method="POST" action="/risks">
+    <br><br>
+    <h4>Title:</h4>
+    <input type="text" id = "title" name = "title" placeholder="Enter title">
+    <br><br>
+    <h4>Status:</h4>
+    <input type="checkbox" id = "status" name = "status">
+    <br><br>
+    <h4>Keywords:</h4>
+    <textarea id = "keywords" name = "keywords" rows="10" cols="30" placeholder="Enter keywords">
+    </textarea>
+    <br><br>
+    <h4>Description:</h4>
+    <textarea id = "description" name = "description" rows="10" cols="30" placeholder="Enter description">
+    </textarea>
+    <br><br>
+    <h4>Regex:</h4>
+    <textarea id = "regex" name = "regex" rows="10" cols="30" placeholder="Enter regex">
+    </textarea>
+    <br><br>
+    <h4>Risk count:</h4>
+    <input type="number" id = "count" name = "count">
+    <br><br>
+    <input type="submit" value="Add Risk">
+    <br><br>
+    </form>
+    </center>
+    </div>
+</body>
+</html>

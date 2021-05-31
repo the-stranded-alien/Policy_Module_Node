@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Policies created</title>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        border-spacing: 3px;
+    }
+    th, td {
+        padding: 15px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <center> 
+    <div>
+        <h1> All Created Policies </h1>
+    </div>
+    <div>
+        <fieldset>
+        <legend> All Policies Created By You : </legend>
+            <table>
+            <tr>
+                <th> Policy ID </th>
+                <th> Policy Name </th>
+                <th> Remedy Type </th>
+                <th> Remedy Time </th>
+                <th> Admin Email </th>
+                <th> Admin subject </th>
+            </tr>
+            {{#each allUserPolicies}}
+                <tr>
+                    <form method="POST" action="/viewPolicies">
+                    <td name="c_id" contenteditable="false"> {{this.policy_id}} </td>
+                    <td name="c_policy_title" contenteditable="true"> {{this.policy_name}} </td>
+                    <td name="c_remedy_type"contenteditable="true"> {{this.remedy_type}} </td>
+                    <td name="c_remedy_time" contenteditable="true"> {{this.remedy_time}} </td>
+                    <td name="c_admin_email" contenteditable="true"> {{this.admin_email}} </td>
+                    <td name="c_admin_subject" contenteditable="true"> {{this.admin_subject}} </td>
+                    <td> <input type="submit" value="Edit"> </td>
+                    </form>
+                </tr>
+            {{/each}}
+            </table>
+        </fieldset>
+    </div>
+    </center>
+</body>
+</html>

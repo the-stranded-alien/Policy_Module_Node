@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Policy</title>
+</head>
+<body>
+    <center> 
+    <div>
+        <h1>Add Risks to Policy</h1>
+    </div>
+    <div>
+    <form method="POST" action="/policyrisk">
+    <fieldset>
+    <legend> Select Risks to Add to this Policy </legend>
+        {{#each risks}}
+            <input type = "checkbox" {{ bindAttr checked="isChecked" }} name="userrisk" value = "{{ this.risk_id }}"> {{ this.risk_title }} </option>
+        {{/each}}
+    </fieldset>
+    <input type="submit" value="Add Risks to Policy">
+    </form>
+    <br><br>
+    </form>
+    </center>
+    </div>
+</body>
+</html>

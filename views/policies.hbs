@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Policy</title>
+</head>
+<body>
+    <center> 
+    <div>
+        <h1>Policy Page</h1>
+    </div>
+    <div>
+    <form method="POST" action="/policies">
+    <br><br>
+    Policy Name:<input type="text" id = "title" name = "title" placeholder="Enter Policy name">
+    <br><br>
+    Remedy Type:<input type="text" id = "remtype" name = "remtype" placeholder="Remedy Type">
+    <br><br>
+    Remedy Time:<input type="text" id = "remtime" name = "remtime" placeholder="Remedy Time">
+    <br><br>
+    Notify User:<input type="checkbox" id = "notify_user" name = "notify_user" >
+    <br><br>
+    Notify Admin:<input type="checkbox" id = "notify_admin" name = "notify_admin" >
+    <br><br>
+    Admin Email: <input type="text" id = "email_admin" name = "email_admin" placeholder="Admin Email">
+    <br><br>
+    Admin Email Subject:<input type="text" id = "subject_admin" name = "subject_admin" placeholder="Admin Email Subject">
+    <br><br>
+    <input type="submit" value="Add Policy">
+    <br><br>
+    </form>
+    </center>
+    </div>
+</body>
+</html>

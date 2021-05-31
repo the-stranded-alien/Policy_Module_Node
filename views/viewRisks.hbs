@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Risks created</title>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        border-spacing: 3px;
+    }
+    th, td {
+        padding: 15px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <center> 
+    <div>
+        <h1> All Created Risks </h1>
+    </div>
+    <div>
+        <fieldset>
+        <legend> All Risks Created By You : </legend>
+            <table>
+            <tr>
+                <th> Risk-ID </th>
+                <th> Title </th>
+                <th> Status </th>
+                <th> Keywords </th>
+                <th> Description </th>
+                <th> Regex </th>
+                <th> Risk Match Count</th>
+            </tr>
+            {{#each allUserRisks}}
+                <tr>
+                    <form method="POST" action="/viewRisks">
+                    <td name="c_id" contenteditable="false"> {{this.risk_id}} </td>
+                    <td name="c_risk_title" contenteditable="true"> {{this.risk_title}} </td>
+                    <td name="c_status"contenteditable="true"> {{this.status}} </td>
+                    <td name="c_keywords" contenteditable="true"> {{this.keywords}} </td>
+                    <td name="c_description" contenteditable="true"> {{this.description}} </td>
+                    <td name="c_regex" contenteditable="true"> {{this.regex}} </td>
+                    <td name="c_risk_match_count" contenteditable="true"> {{this.risk_match_count}} </td>
+                    <td> <input type="submit" value="Edit"> </td>
+                    </form>
+                </tr>
+            {{/each}}
+            </table>
+        </fieldset>
+    </div>
+    </center>
+</body>
+</html>
